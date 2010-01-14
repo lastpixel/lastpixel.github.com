@@ -1,0 +1,466 @@
+/*  
+Theme Name: SG/Dark
+Theme URI: http://theundersigned.net/
+Description: Minimalistic two-in-one column theme. Searching and commenting is powered by AJAX made by <a href="http://sevengoslings.net">Seven Goslings</a>, but works as normal if javascript is disabled. Design is made by <a href="http://theundersigned.net">the undersigned</a>. Please report if any bugs is found!
+Version: 1.0
+Author: The undersigned
+Author URI: http://theundersigned.net/
+
+The CSS, XHTML, JS and design is released under GPL:
+http://www.opensource.org/licenses/gpl-license.php
+*/
+
+
+/* Overall */
+
+body{ 
+margin:0;
+background-color:#000;
+font-family: Helvetica, sans;
+color: #ddd
+}
+
+form {
+display:inline;
+margin:0;
+padding:0;
+}
+
+a:link, a:visited {
+text-decoration:none;
+color:#BFD72F;
+}
+
+a:hover {
+color:#ADC32A;
+}
+
+.content {
+position:relative;
+width:900px;
+left:50%;
+margin-left:-450px;
+}
+
+/* Top menu */
+
+#menucontainer {
+position:relative;
+width:100%;
+background-image:url(pic/menubg.jpg);
+height:210px;
+}
+
+#menucontainer ul {
+list-style:none;
+margin:0;
+padding:0;
+}
+
+#menucontainer ul li {
+display:block;
+position:relative;
+float:left;
+}
+
+#menucontainer ul li a:link, #menucontainer ul li a:visited {
+display:block;
+position:relative;
+float:left;
+padding:160px 30px 20px 30px;
+font-size:11px;
+line-height:10px;
+text-transform:uppercase;
+letter-spacing:1px;
+color:#BFD72F;
+text-decoration:none;
+}
+
+#menucontainer ul li a:hover {
+background-image:url(pic/menubghover.jpg);
+padding:160px 29px 20px 29px;
+border-left:1px solid #BFD72F;
+border-right:1px solid #BFD72F;
+border-bottom:3px solid #BFD72F;
+color:#EEE;
+}
+
+#menucontainer ul .current_page_item a:link, #menucontainer ul .current_page_item a:visited {
+background-image:url(pic/menubghover.jpg);
+border-bottom:3px solid #BFD72F;
+color:#BFD72F;
+}
+
+#menucontainer ul .current_page_item a:hover {
+border-left:0;
+border-right:0;
+padding:160px 30px 20px 30px;
+color:#BFD72F;
+}
+
+/* Main content */
+
+#maincontainer {
+position:relative;
+/*width:100%;*/
+width: 375px;
+background-color:#444;
+margin: 0 auto;
+}
+
+#postone {
+position:relative;
+width:380px;
+float:left;
+margin:20px 0 20px 30px;
+}
+
+#posttwo {
+position:relative;
+width:380px;
+float:right;
+margin:20px 30px 20px 0;
+}
+
+#pagepost {
+position:relative;
+float:left;
+width:500px;
+left:50%;
+margin:20px 0 20px -250px;
+}
+
+#postone img, #posttwo img, #pagepost img {
+border-left:3px solid #BFD72F;
+display:block;
+margin:20px 0 20px 27px;
+padding-left:10px;
+border-top:0;
+border-bottom:0;
+border-right:0;
+}
+
+#maincontainer h2 {
+color:#BFD72F;
+text-transform:uppercase;
+font-size:18px;
+margin:0 0 5px 0;
+letter-spacing:5px;
+font-weight:normal;
+}
+
+#maincontainer .post p {
+margin:0 0 20px 0;
+}
+
+#maincontainer .post em {
+	color:#EEE;
+	font-size:12px;
+	line-height:20px;
+}
+
+#maincontainer .post p, #maincontainer .post ul, #maincontainer .post ol {
+color:#EEE;
+font-size:12px;
+line-height:20px;
+}
+
+#maincontainer .post blockquote {
+font-style:italic;
+border-left:3px solid #BFD72F;
+margin-left:27px;
+padding-left:10px;
+}
+
+#maincontainer .post .postdata {
+color:#AAA;
+font-size:10px;
+font-style:italic;
+margin:-10px 0 0 0;
+}
+
+#maincontainer .post h1 {
+color:#BFD72F;
+text-transform:uppercase;
+font-size:15px;
+margin:0 0 5px 0;
+letter-spacing:3px;
+font-weight:normal;
+}
+
+#maincontainer .post h2 {
+color:#BFD72F;
+text-transform:uppercase;
+font-size:13px;
+margin:0 0 5px 0;
+letter-spacing:3px;
+font-weight:normal;
+}
+
+#maincontainer .post h3 {
+color:#BFD72F;
+text-transform:uppercase;
+font-size:11px;
+margin:0 0 5px 0;
+letter-spacing:3px;
+font-weight:normal;
+}
+
+/* Comments */
+
+.commentodd {
+background-color:#333;
+border-left:2px solid #BFD72F;
+}
+
+.commentodd, .commenteven {
+position:relative;
+width: 380px;
+}
+
+.commentcontent {
+padding:5px 15px 5px 15px;
+}
+
+.commentcontent p {
+font-size:11px;
+line-height:17px;
+color:#EEE;
+}
+
+.commentcontent .commentinfo {
+color:#AAA;
+}
+
+.commentcontent blockquote {
+font-style:italic;
+border-left:3px solid #BFD72F;
+margin-left:17px;
+padding-left:10px;
+}
+
+.commentcontent ul, .commentcontent ol {
+margin-left:15px;
+}
+
+#comment {
+width: 380px;
+}
+
+
+/* Bottom content */
+
+#bottomcontainer {
+position:relative;
+clear:both;
+float:left;
+width:100%;
+background-image:url(pic/bottombg.jpg);
+background-repeat:repeat-x;
+background-color:#222;
+}
+
+#bottomcontainer .content {
+padding-top:40px;
+}
+
+#bottomcontainer h2 {
+color:#BFD72F;
+text-transform:uppercase;
+font-size:13px;
+margin:0 0 5px 0;
+letter-spacing:3px;
+font-weight:normal;
+}
+
+#bottomcontainer ul {
+list-style:none;
+margin:0 0 30px 0;
+padding:0;
+border-bottom:3px solid #BFD72F;
+}
+
+#bottomcontainer ul li {
+display:block;
+position:relative;
+font-size:11px;
+text-transform:uppercase;
+letter-spacing:1px;
+line-height:20px;
+padding:0 10px 0 10px;
+border-bottom:1px solid #666;
+color: #EEE;
+}
+
+#bottomcontainer ul li a:link, #bottomcontainer ul li a:visited {
+color:#EEE;
+text-decoration:none;
+}
+
+#bottomcontainer ul li a:hover {
+color:#BFD72F;
+}
+
+#column1 {
+position:relative;
+float:left;
+width:280px;
+}
+
+#column1 img {
+border:0;
+}
+
+#column2 {
+position:relative;
+float:left;
+margin-left:30px;
+width:280px;
+}
+
+#column3 {
+position:relative;
+float:right;
+width:280px;
+}
+
+.bottomsmallright a:link, .bottomsmallright a:visited, .bottomsmallleft a:link, .bottomsmallleft a:visited {
+color:#EEE;
+}
+
+.bottomsmallright a:hover, .bottomsmallleft a:hover {
+color:#ADC32A;
+}
+
+.bottomsmallright {
+height:25px;
+font-size:12px;
+text-align:right;
+margin-right:20px;
+line-height:25px;
+padding-bottom:30px;
+}
+
+.bottomsmallleft {
+height:25px;
+font-size:12px;
+text-align:left;
+margin-left:10px;
+line-height:25px;
+padding-bottom:30px;
+}
+
+.bottomsmallcenter {
+height:20px;
+font-size:12px;
+text-align:center;
+line-height:25px;
+}
+
+.bottomsmallcenter {
+padding-bottom:30px;
+}
+
+html>body .bottomsmallcenter {
+padding-bottom:35px;
+}
+
+#s {
+background-color:#333333;
+color:#EEEEEE;
+border:0;
+text-align:center;
+height:20px;
+}
+
+#ssubmit {
+height:20px;
+width:60px;
+vertical-align:middle;
+}
+
+/* Footer */
+
+#footer {
+position:relative;
+clear:both;
+width:100%;
+padding:30px 0 5px 0;
+height:30px;
+background-color:#222;
+}
+
+#footer p {
+color:#666;
+font-size:11px;
+line-height:30px;
+text-align:center;
+margin:0;
+}
+
+#footer img {
+border:0;
+}
+
+#footer a:link, #footer a:visited {
+color:#666;
+}
+
+#footer a:hover {
+color:#666;
+text-decoration:underline;
+}
+
+#postone input {
+width:380px;
+}
+
+#postone #mailsubmit {
+width:100px;
+}
+
+#postone textarea {
+width:380px;
+height:100px;
+}
+
+
+/* stu's additions */
+#menucontainer {
+  display: none;
+}
+
+#menucontainer .content {
+  display: none;
+}
+
+#maincontainer div {
+  display: none;
+}
+
+#maincontainer {
+  background: black;
+}
+
+#maincontainer img {
+  width: 323px;
+  margin: 24px;
+}
+
+#maincontainer #my-content {
+  display: block;
+  width: 323px;
+  text-align: center;
+  margin-left: 24px;
+  font-size: 11pt;
+}
+
+
+#maincontainer #my-content a {
+  text-decoration: none;
+  color: #ccc;
+}
+
+#maincontainer #my-content a:hover {
+  color: #fff;
+}
